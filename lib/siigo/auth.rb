@@ -1,6 +1,5 @@
-class Siigo
-
-    def auth(user, password)
+module Siigo
+    class Auth(user, password)
         url = 'https://api.siigo.com/auth'
         payload = {
                   "username": user,

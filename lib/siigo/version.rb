@@ -1,3 +1,3 @@
-class Siigo
-    VERSION = '0.0.1'.freeze
+module Siigo
+    VERSION = '0.1.0'.freeze
 end
