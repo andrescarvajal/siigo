@@ -1,4 +1,9 @@
-require 'siigo/auth'
+require 'json'
+require 'rest-client'
+require 'csv'
 
-module Siigo
+class Siigo
 end
+
+require 'siigo/auth'
+require 'siigo/account_group'
