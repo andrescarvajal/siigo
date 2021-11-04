@@ -19,7 +19,7 @@ class Siigo::AccountGroup
             end
         end
 
-        puts String(account_groups.count) + " account groups were written to the file"
+        puts String(account_groups.count) + " account groups were written to the file ✅"
         puts ""
     end
     

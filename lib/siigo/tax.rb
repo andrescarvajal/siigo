@@ -21,7 +21,7 @@ class Siigo::Tax
             end
         end
 
-        puts String(taxes.count) + " taxes were written to the file" + "\n"
+        puts String(taxes.count) + " taxes were written to the file ✅"
         puts ""
     end
     
