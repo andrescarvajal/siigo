@@ -7,3 +7,4 @@ end
 
 require 'siigo/auth'
 require 'siigo/account_group'
+require 'siigo/tax'

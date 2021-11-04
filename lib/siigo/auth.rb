@@ -1,8 +1,7 @@
 class Siigo::Auth
   
     def authenticate(user, password)
-        puts "User = " + user 
-        puts "Password = " + password 
+        puts "Starting authentication with Siigo"
 
         url = 'https://api.siigo.com/auth'
         payload = {
@@ -15,7 +14,8 @@ class Siigo::Auth
       
         begin 
           response = RestClient.post(url, payload, headers)
-          #cookies[:siigo_api_token] = JSON.parse(response.body)["access_token"]
+          puts "Authentication successful"
+          puts ""
           return JSON.parse(response.body)["access_token"]
         rescue => e1
             puts "Enter in rescue"
