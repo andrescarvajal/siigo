@@ -38,9 +38,7 @@ class Siigo::Customer
                         #puts "Fetched data in " + String(try) + " try"
                         try = try + 1
     
-                        puts "Writing " + resource_tag + " to the database"
                         for j in 0..(resources.count-1)
-                            #tools.write_resource_to_db(resources, i, resource_tag)
                             resources_all_local.push(resources[j])
                         end
                     else 
@@ -54,8 +52,8 @@ class Siigo::Customer
                     diff_prom = Float(diff_prom*(i-1))/Float(i) + Float(diff)/Float(i)   
                     #diff_prom = Float(diff)/Float(i)         
                     time_last = time_now
-                    puts "Diff = " + String(diff)
-                    puts "Diff prom = " + String(diff_prom)
+                    #puts "Diff = " + String(diff)
+                    #puts "Diff prom = " + String(diff_prom)
                     puts "Remaning time = " + String(diff_prom * (page_amount - i))
 
 
@@ -68,9 +66,9 @@ class Siigo::Customer
             end
         end
 
-        puts "All resources local that were fetched"
-        puts resources_all_local.count
-        puts resources_all_local[14]
+        #puts "All resources local that were fetched"
+        #puts resources_all_local.count
+        #puts resources_all_local[14]
 
         headers = ["id", "identification", "name", "created_at"]
         CSV.open(output_path, "w") do |csv|
