@@ -10,4 +10,6 @@ require 'siigo/account_group'
 require 'siigo/tax'
 require 'siigo/cost_center'
 require 'siigo/customer'
+require 'siigo/products'
+
 require 'siigo/tools'

@@ -1,7 +1,7 @@
-class Siigo::Customer
+class Siigo::Products
 
     def fetch(token, output_path)
-        resource_tag = "customers"
+        resource_tag = "products"
 
         puts "Starting to fetch " + resource_tag + " from Siigo"
 
@@ -66,14 +66,18 @@ class Siigo::Customer
         puts "Writing data to the file. This could take a while..."
         n = 0
 
-        headers = ["id", "identification", "name", "created_at"]
+        headers = ["id", "code", "name", "account_group",
+                   "type", "taxes", "created_at"]
         CSV.open(output_path, "w") do |csv|
             csv << headers
         
             resources_all_local.each do |resource_local|
                 csv << [String(resource_local["id"]), 
-                        String(resource_local["identification"]), 
+                        String(resource_local["code"]), 
                         String(resource_local["name"]),
+                        String(resource_local["account_group"]["id"]),
+                        String(resource_local["type"]),
+                        String(resource_local["taxes"]),
                         String(resource_local["metadata"]["created"])]
 
                 n = n + 1
@@ -81,7 +85,7 @@ class Siigo::Customer
                     puts String(n) + " data has been written to the file"
                 end
 
-            end  
+            end            
         end
 
         puts String(resources_all_local.count) + " " + resource_tag + " were written to the file ✅"
