@@ -1,4 +1,4 @@
-class Siigo::CostCenter
+class Siigo::CostCenters
 
     def fetch(token, output_path)
         puts "Starting to fetch cost centers from Siigo"

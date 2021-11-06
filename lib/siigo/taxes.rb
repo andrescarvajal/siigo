@@ -1,4 +1,4 @@
-class Siigo::Tax
+class Siigo::Taxes
 
     def fetch(token, output_path)
         puts "Starting to fetch taxes from Siigo"

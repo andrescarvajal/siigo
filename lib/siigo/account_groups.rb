@@ -1,4 +1,4 @@
-class Siigo::AccountGroup
+class Siigo::AccountGroups
 
     def fetch(token, output_path)
         puts "Starting to fetch account groups from Siigo"
